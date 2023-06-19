@@ -1,0 +1,55 @@
+[11:29, 19/6/2023] Pata: <!DOCTYPE html>
+<html>
+  <head>
+    <title>Factorial Calculator</title>
+  </head>
+  <body>
+    <label>Enter a number:</label>
+    <input type="number" id="num" />
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+    <p id="result"></p>
+    <script>
+        function calculateFactorial() {
+  var num = document.getElementById("num").value;
+  var result = 1;
+  for (var i = 1; i <= num; i++) {
+    result *= i; 
+  }
+  document.getElementById("result").innerHTML = "The factorial of " + num + " is " + result;
+}
+    </script>
+
+  </body>
+</html>
+[11:37, 19/6/2023] Pata: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bono navideño</title>
+</head>
+<body>
+    <label for="antiguedad">Antigüedad en años:</label>
+<input type="number" id="antiguedad">
+<label for="sueldo">Sueldo:</label>
+<input type="number" id="sueldo">
+<button onclick="calcularBono()">Calcular bono navideño</button>
+<p id="resultado"></p>
+<script>
+    function calcularBono() {
+  var antiguedad = document.getElementById("antiguedad").value;
+  var sueldo = document.getElementById("sueldo").value;
+  var bono;
+
+  if (antiguedad > 4 || sueldo < 2000) {
+    bono = sueldo * 0.25;
+  } else {
+    bono = sueldo * 0.2;
+  }
+
+  document.getElementById("resultado").innerHTML = "El bono navideño que le corresponde es de $" + bono.toFixed(2);
+}
+</script>
+</body>
+</html>
